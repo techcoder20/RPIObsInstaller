@@ -24,17 +24,19 @@ sudo apt -y --fix-broken install
 #Removing existing desktop file
 sudo rm /usr/share/applications/com.obsproject.Studio.desktop
 
+cp ~/RPIObsInstaller/.obsrun.sh ~/
+sudo chmod +x ~/.obsrun.sh
+
 #Creating desktop file
-echo '''
-[Desktop Entry]
+echo '''[Desktop Entry]
 Version=1.0
 Name=OBS Studio
 Comment=Free and Open Source Streaming/Recording Software
-Exec=MESA_GL_VERSION_OVERRIDE=3.3 obs
+Exec=/home/pi/.obsrun.sh
 Icon=com.obsproject.Studio
 Terminal=false
 Type=Application
 Categories=AudioVideo;Recorder;
 StartupNotify=true
 StartupWMClass=obs
-''' | sudo tee -a /usr/share/applications/com.obsproject.Studio.desktop
+''' >> ~/.local/share/applications/com.obsproject.Studio.desktop
