@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Installing Dependencies
+sudo apt -y install libxcb*
+
 #Removing Deb files if already downloaded
 rm libfdk-aac2_2.0.1-1_armhf.deb libfdk-aac-dev_2.0.1-1_armhf.deb
 
@@ -18,13 +21,10 @@ rm libfdk-aac2_2.0.1-1_armhf.deb libfdk-aac-dev_2.0.1-1_armhf.deb
 sudo dpkg -i ~/RPIObsInstaller/obs_armhf.deb
 sudo apt -y --fix-broken install
 
-#Installing Dependencies
-sudo apt -y install libxcb*
-
-
-
+#Removing existing desktop file
 sudo rm /usr/share/applications/com.obsproject.Studio.desktop
 
+#Creating desktop file
 echo '''
 [Desktop Entry]
 Version=1.0
