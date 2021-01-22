@@ -16,6 +16,7 @@ rm libfdk-aac2_2.0.1-1_armhf.deb libfdk-aac-dev_2.0.1-1_armhf.deb
 
 #Installing Obs
 sudo dpkg -i ~/RPIObsInstaller/obs_armhf.deb
+sudo apt -y --fix-broken install
 
 echo '''
 [Desktop Entry]
