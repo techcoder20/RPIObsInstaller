@@ -37,4 +37,4 @@ Type=Application
 Categories=AudioVideo;Recorder;
 StartupNotify=true
 StartupWMClass=obs
-''' >> | sudo tee -a /usr/share/applications/com.obsproject.Studio.desktop
+''' | sudo tee -a /usr/share/applications/com.obsproject.Studio.desktop
