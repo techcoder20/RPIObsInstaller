@@ -19,9 +19,22 @@ sudo dpkg -i ~/RPIObsInstaller/obs_armhf.deb
 sudo apt -y --fix-broken install
 
 #Installing Dependencies
-sudo apt -y install libmbedtls-dev libasound2-dev libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev libcurl4-openssl-dev libfontconfig1-dev libfreetype6-dev libgl1-mesa-dev libjack-jackd2-dev libjansson-dev libluajit-5.1-dev libpulse-dev libqt5x11extras5-dev libspeexdsp-dev libswresample-dev libswscale-dev libudev-dev libv4l-dev libvlc-dev libx11-dev libx11-xcb1 libx11-xcb-dev libxcb-xinput0 libxcb-xinput-dev libxcb-randr0 libxcb-randr0-dev libxcb-xfixes0 libxcb-xfixes0-dev libx264-dev libxcb-shm0-dev libxcb-xinerama0-dev libxcomposite-dev libxinerama-dev pkg-config python3-dev qtbase5-dev libqt5svg5-dev swig
+sudo apt -y install libxcb*
 
-#Removing Desktop File Created by obs
-sudo rm /usr/sh
 
-sudo sed -i '/Exec/c\Exec=MESA_GL_VERSION_OVERRIDE=3.3 obs' /usr/share/applications/com.obsproject.Studio.desktop
+
+sudo rm /usr/share/applications/com.obsproject.Studio.desktop
+
+echo '''
+[Desktop Entry]
+Version=1.0
+Name=OBS Studio
+Comment=Free and Open Source Streaming/Recording Software
+Exec=MESA_GL_VERSION_OVERRIDE=3.3 obs
+Icon=com.obsproject.Studio
+Terminal=false
+Type=Application
+Categories=AudioVideo;Recorder;
+StartupNotify=true
+StartupWMClass=obs
+''' >> /usr/share/applications/com.obsproject.Studio.desktop
