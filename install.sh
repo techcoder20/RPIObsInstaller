@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ ! -d ~/RPIObsInstaller ];then 
+  git clone https://github.com/techcoder20/RPIObsInstaller.git ~/RPIObsInstaller
+  sudo chmod +x ~/RPIObsInstaller/install.sh
+fi
+
 #Installing Dependencies
 sudo apt -y install libxcb*
 
