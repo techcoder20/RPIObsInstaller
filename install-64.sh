@@ -15,9 +15,9 @@ sudo apt -y install libmbedtls-dev libasound2-dev libavcodec-dev libavdevice-dev
 sudo rm -f ~/libfdk-aac2_2.0.1-1_arm64.deb ~/libfdk-aac-dev_2.0.1-1_arm64.deb ~/obs_arm64.deb
 
 #Downloading deb files
-wget http://ftp.debian.org/debian/pool/non-free/f/fdk-aac/libfdk-aac2_2.0.1-1_arm64.deb -O ~/libfdk-aac2_2.0.1-1_armhf.deb || error "Failed to download libfdk-aac2_2.0.1-1_armhf.deb"
-wget http://ftp.debian.org/debian/pool/non-free/f/fdk-aac/libfdk-aac-dev_2.0.1-1_arm64.deb -O ~/libfdk-aac-dev_2.0.1-1_armhf.deb || error "Failed to download libfdk-aac-dev_2.0.1-1_armhf.deb"
-wget https://github.com/techcoder20/RPIObsInstaller/blob/main/obs_arm64.deb?raw=true -O ~/obs_armhf.deb || error "Failed to download obs_armhf.deb"
+wget http://ftp.debian.org/debian/pool/non-free/f/fdk-aac/libfdk-aac2_2.0.1-1_arm64.deb -O ~/libfdk-aac2_2.0.1-1_arm64.deb || error "Failed to download libfdk-aac2_2.0.1-1_armhf.deb"
+wget http://ftp.debian.org/debian/pool/non-free/f/fdk-aac/libfdk-aac-dev_2.0.1-1_arm64.deb -O ~/libfdk-aac-dev_2.0.1-1_arm64.deb || error "Failed to download libfdk-aac-dev_2.0.1-1_armhf.deb"
+wget https://github.com/techcoder20/RPIObsInstaller/blob/main/obs_arm64.deb?raw=true -O ~/obs_arm64.deb || error "Failed to download obs_armhf.deb"
 
 #Installing Deb Files
 sudo apt -y install --fix-missing ~/libfdk-aac2_2.0.1-1_arm64.deb || error "Failed to install ~/libfdk-aac2_2.0.1-1_armhf.deb"
